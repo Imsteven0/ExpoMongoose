@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('../partials/head.ejs'); %>
+    <title>Título de la página</title>
+</head>
+
+</head>
+
+<body>
+    <%- include('../partials/navbar.ejs'); %>
+        <div class="container-sm pt-3">
+            <% if (typeof message !=='undefined' ) { %>
+                <script>
+                    const message = "<%= message %>";
+                    Swal.fire({
+                        position: 'center',
+                        icon: 'success',
+                        title: message,
+                        showConfirmButton: false,
+                        timer: 1500
+                    })
+                </script>
+                <% } %>
+                    <div class="overlay">
+                        <h3>Formulario de películas</h3>
+                        <form action="movies" method="post">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="mb-3">
+                                        <label for="Titulo" class="form-label">Título:</label>
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" id="Titulo" name="Titulo" required>
+                                            <span class="input-group-text">
+                                                <i class="fa-solid fa-clapperboard"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="mb-3">
+                                        <label for="Director" class="form-label">Director:</label>
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" id="Director" name="Director"
+                                                required>
+                                            <span class="input-group-text">
+                                                <i class="fa-solid fa-circle-user"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="mb-3">
+                                        <label for="Duracion" class="form-label">Duración (min):</label>
+                                        <div class="input-group">
+                                            <input type="number" class="form-control" id="Duracion" name="Duracion"
+                                                required>
+                                            <span class="input-group-text">
+                                                <i class="fa-solid fa-clock"></i>
+                                            </span>
+                                        </div>  
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="mb-3">
+                                        <label for="Precio" class="form-label">Precio:</label>
+                                        <div class="input-group">
+                                            <input type="number" class="form-control" id="Precio" name="Precio"
+                                                required>
+                                            <span class="input-group-text">
+                                                <i class="fa-solid fa-money-bill-1-wave"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="mb-3">
+                                        <label for="TotalVentas" class="form-label">Ventas totales:</label>
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" id="TotalVentas" name="TotalVentas"
+                                                required>
+                                            <span class="input-group-text">
+                                                <i class="fa-solid fa-wallet"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="mb-3">
+                                        <label for="Calificacion" class="form-label">Calificación:</label>
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" id="Calificacion"
+                                                name="Calificacion" required>
+                                            <span class="input-group-text">
+                                                <i class="fa-solid fa-star"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-grid">
+                                <button type="submit" class="btn btn-primary btn-lg">Agregar película</button>
+                            </div>
+                        </form>
+                    </div>
+        </div>
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/js/bootstrap.bundle.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+
+</html>

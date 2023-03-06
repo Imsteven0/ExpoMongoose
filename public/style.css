@@ -1,0 +1,39 @@
+.overlay {
+  width: 100%;
+  padding: 2rem 2rem;
+  background: radial-gradient(
+    circle at 20% 20%,
+    #E0A2C9 0%,
+    #9B6AAC 50%,
+    transparent 50%,
+    transparent 100%
+  ),
+  radial-gradient(
+    circle at 80% 30%,
+    #E0A2C9 0%,
+    #9B6AAC 50%,
+    transparent 50%,
+    transparent 100%
+  );  
+  box-shadow: 0 0.75rem 2rem 0 rgba(0, 0, 0, 0.1);
+  border-radius: 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.125);
+}
+
+.bg-img {
+  background-image: url(../public/img/bg.png);
+  background-repeat: no-repeat;
+  background-position: top left;
+}
+
+.multiText{
+  color: #7f00ff;
+  text-transform: capitalize;
+}
+
+h1{
+  display: block;
+  font-size: 2.5em;
+  font-weight: 900;
+  color: #3d535f;
+}
