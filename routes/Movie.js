@@ -6,12 +6,15 @@ module.exports = function () {
 
     router.get('/', controllerMovie.home);
 
+    router.get('/movies', controllerMovie.listMovies);
+
     router.get('/AddMovies', controllerMovie.FormMovie);
 
-    router.post('/movies', controllerMovie.AddMovies)
+    router.post('/movies', controllerMovie.AddMovies);
 
-    router.put('/movies:id', controllerMovie.UpdateMovies)
+    router.put('/movies:id', controllerMovie.UpdateMovies);
 
-    router.delete('/movies', controllerMovie.DeleteMovies)
+    router.delete('/movies', controllerMovie.DeleteMovies);
+
     return router;
 }

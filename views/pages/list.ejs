@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('../partials/head.ejs'); %>
+        <title>Título de la página</title>
+</head>
+
+</head>
+
+<body>
+    <%- include('../partials/navbar.ejs'); %>
+        <div class="container-sm pt-3">
+            <div class="overlay">
+                <h1>Listado de películas</h1>
+                <table id="example" class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Título</th>
+                            <th>Director</th>
+                            <th>Duración</th>
+                            <th>Precio</th>
+                            <th>Total de ventas</th>
+                            <th>Calificación</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% data.forEach((dataMovies)=>{%>
+                            <tr>
+                                <td>
+                                    <%=dataMovies.Titulo%>
+                                </td>
+                                <td>
+                                    <%=dataMovies.Director%>
+                                </td>
+                                <td>
+                                    <%=dataMovies.Duracion%>
+                                </td>
+                                <td>
+                                    <%=dataMovies.Precio%>
+                                </td>
+                                <td>
+                                    <%=dataMovies.TotalVentas%>
+                                </td>
+                                <td>
+                                    <%=dataMovies.Calificacion%>
+                                </td>
+                            </tr>
+                            <% }) %>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/js/bootstrap.bundle.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+        <script type="text/javascript" src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
+        <script type="text/javascript"
+            src="https://cdn.datatables.net/1.10.25/js/dataTables.bootstrap5.min.js"></script>
+</body>
+
+</html>

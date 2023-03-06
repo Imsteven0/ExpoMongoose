@@ -2,14 +2,14 @@
   width: 100%;
   padding: 2rem 2rem;
   background: radial-gradient(
-    circle at 20% 20%,
+    circle at 20% 50%,
     #E0A2C9 0%,
     #9B6AAC 50%,
     transparent 50%,
     transparent 100%
   ),
   radial-gradient(
-    circle at 80% 30%,
+    circle at 80% 50%,
     #E0A2C9 0%,
     #9B6AAC 50%,
     transparent 50%,
@@ -36,4 +36,72 @@ h1{
   font-size: 2.5em;
   font-weight: 900;
   color: #3d535f;
+}
+
+.logo {
+  width: 150px;
+  min-width: 100px;
+  font-size: 14px;
+  line-height: 37px;
+  height: 43px;
+}
+
+.console {
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  background-color: #333;
+  color: #fff;
+  font-family: Consolas, monospace;
+  font-size: 14px;
+  line-height: 1.5;
+  overflow: auto;
+  position: relative;
+  width: 500px;
+  height: 300px;
+}
+
+.console-header {
+  background-color: #666;
+  height: 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 5px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.console-button {
+  border-radius: 50%;
+  width: 12px;
+  height: 12px;
+  display: inline-block;
+  margin-right: 5px;
+}
+
+.console-button.red {
+  background-color: #f00;
+}
+
+.console-button.yellow {
+  background-color: #ff0;
+}
+
+.console-button.green {
+  background-color: #0f0;
+}
+
+.console-body {
+  padding: 10px;
+}
+
+pre {
+  margin: 0;
+  padding: 0 10px;
+}
+
+code {
+  display: block;
+  padding: 10px 0;
 }

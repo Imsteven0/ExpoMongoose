@@ -8,42 +8,70 @@
 
 <body>
     <%- include('../partials/navbar.ejs'); %>
-
         <div class="container-sm pt-3">
             <div class="overlay">
                 <section id="hero" class="hero d-flex align-items-center section-bg">
                     <div class="container position-relative">
                         <div
                             class="col-lg-12 d-flex flex-column justify-content-center align-items-center align-items-lg-start text-center text-lg-start">
-                            <a href="https://github.com/" target="_blank"
+                            <a href="https://github.com/Imsteven0/ExpoMongoose.git" target="_blank"
                                 class="github-logo position-absolute top-0 end-0 m-3 text-dark">
                                 <i class="fab fa-github fa-2x"></i>
                             </a>
-                            <h1 data-aos="fade-up">
+                            <h1 class="text-center" data-aos="fade-up">
                                 Desarrollado por
                                 <span class="multiText"></span>
                             </h1>
-                            <p data-aos="fade-up" data-aos-delay="100">
-                                Bienvenido a Nova Cinemas, donde podrás encontrar una amplia
-                                selección de títulos para todos los gustos. Desde los clásicos del cine hasta los
-                                estrenos más recientes, nuestra colección de películas te llevará a través de
-                                emocionantes aventuras, romances apasionados, intrigas de suspense y mucho más.
-                            </p>
+                            <div class="row">
+                                <div class="col-md-6 pt-5">
+                                    <h2 class="text-center">InsertOne</h2>
+                                    <p>
+                                        Insert One es un método de la biblioteca Mongoose para
+                                        Node.js que permite insertar un solo documento en una
+                                        colección de MongoDB utilizando un modelo de Mongoose. Este
+                                        método es una forma sencilla y conveniente de insertar
+                                        documentos en MongoDB y es ampliamente utilizado en
+                                        aplicaciones de Node.js que utilizan bases de datos MongoDB.
+                                    </p>
+                                </div>
+                                <div class="col-md-6 pt-5">
+                                    <img src="../../public/img/insertOne.jpg" alt="Imagen" class="img-fluid" />
+                                </div>
+                                <div class="col-md-6 pt-5">
+                                    <img src="../../public/img/InserMany.jpg" alt="Imagen" class="img-fluid" />
+                                </div>
+                                <div class="col-md-6 pt-5">
+                                    <h2 class="text-center" >InsertMany</h2>
+                                    <p>
+                                        Es un método de MongoDB y Mongoose que permite insertar
+                                        múltiples documentos en una colección de manera eficiente.
+                                        Se proporciona un array de objetos que representan los
+                                        documentos a insertar. Es una operación atómica, lo que
+                                        significa que se insertarán todos los documentos o ninguno.
+                                        Debe asegurarse de que se respeten las restricciones de la
+                                        colección.
+                                    </p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </section>
             </div>
         </div>
-
         <!-- Bootstrap JS -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/js/bootstrap.bundle.min.js"></script>
         <script>
-            const multiText = new Typed('.multiText', {
-                strings: ["Steven Araya", "Gerson Campos", "Nathaly Bermudez", "Maylin Campos"],
+            const multiText = new Typed(".multiText", {
+                strings: [
+                    "Steven Araya",
+                    "Gerson Campos",
+                    "Nathaly Bermudez",
+                    "Maylin Campos",
+                ],
                 typeSpeed: 100,
                 backSpeed: 60,
                 loop: true,
-                backDelay: 150
+                backDelay: 150,
             });
         </script>
 </body>
